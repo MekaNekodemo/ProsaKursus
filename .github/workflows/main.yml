@@ -8,6 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     container: gradle:6-jdk11
     steps:
-      - name: Build and Test
+      - name: Build
         uses: actions/checkout@v4
       - run: ci/build-app.sh
+      - name: test
+      - run: ci/unit-test-app.sh
+   
